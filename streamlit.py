@@ -24,14 +24,22 @@ st.subheader('Rata - Rata Penyewaan Berdasarkan Cuaca')
 
 jumlah_pinjam = load_data().groupby('weathersit')['cnt'].mean()
 
-plt.bar(jumlah_pinjam.index, jumlah_pinjam.values, color='green')
+# Disable the warning
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
+# Your plotting code
+plt.bar(jumlah_pinjam.index, jumlah_pinjam.values, color='green')
 plt.title('Rata - Rata Penyewaan Berdasarkan Cuaca')
 plt.xlabel('Cuaca')
 plt.ylabel('Mean Penyewaan')
 
-st.pyplot()
-
+# Pass the figure to st.pyplot()
+fig, ax = plt.subplots()
+ax.bar(jumlah_pinjam.index, jumlah_pinjam.values, color='green')
+ax.set_title('Rata - Rata Penyewaan Berdasarkan Cuaca')
+ax.set_xlabel('Cuaca')
+ax.set_ylabel('Mean Penyewaan')
+st.pyplot(fig)
 st.markdown('''**Conclusion Pertanyaan 1 (Apakah ada musim/cuaca tertentu angka peminjaman/penyewaan sepeda meningkat? Jika ada, musim apa?)**
 
 1: Clear, Few clouds, Partly cloudy, Partly cloudy
