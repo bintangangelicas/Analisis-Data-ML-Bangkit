@@ -1,16 +1,16 @@
-# Dicoding Collection Dashboard ✨
+# Bintang's Dashboard ✨
 
 ## Setup environment
 ```
-conda create --name main-ds python=3.9
-conda activate main-ds
-pip install numpy pandas matplotlib seaborn jupyter streamlit
+python3 install streamlit
 ```
 
 ## Run steamlit app
 ```
 streamlit run streamlit.py
 ```
+
+
 
 
 
