@@ -45,6 +45,7 @@ st.markdown('''**Conclusion Pertanyaan 1 (Apakah ada musim/cuaca tertentu angka 
 Angka 1-3 merepresentasikan cuaca, di mana telah dijelaskan keterangan dari angka-angka tersebut.
 Dapat disimpulkan bahwa pada cuaca (1) di mana cuaca bersih dan berawan angka penyewaan sepeda meningkat lalu diikuti oleh cuaca (2) dan (3). Sedangkan di cuaca (4) tidak terdapat record peminjaman sepeda sama sekali.''')
 
+st.subheader('Rata - Rata Penyewaan Berdasarkan Waktu')
 jumlah_pinjam = load_data1().groupby('hr')['cnt'].mean()
 
 plt.bar(jumlah_pinjam.index, jumlah_pinjam.values, color='brown')
