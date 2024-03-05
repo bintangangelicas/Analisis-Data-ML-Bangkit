@@ -7,7 +7,7 @@ python3 install streamlit
 
 ## Run steamlit app
 ```
-streamlit run streamlit.py
+streamlit run dashboard.py
 ```
 
 
