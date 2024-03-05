@@ -13,11 +13,11 @@ st.title('Dashboard Penyewaan Sepeda')
 
 #Baca Dataset
 def load_data():
-    data = pd.read_csv('https://raw.githubusercontent.com/bintangangelicas/Analisis-Data-ML-Bangkit/main/day.csv',delimiter=',')
+    data = pd.read_csv('https://raw.githubusercontent.com/bintangangelicas/Analisis-Data-ML-Bangkit/main/data/day.csv',delimiter=',')
     return data
 
 def load_data1():
-    data1 = pd.read_csv('https://raw.githubusercontent.com/bintangangelicas/Analisis-Data-ML-Bangkit/main/hour.csv')
+    data1 = pd.read_csv('https://raw.githubusercontent.com/bintangangelicas/Analisis-Data-ML-Bangkit/main/data/hour.csv')
     return data1
 
 st.subheader('Rata - Rata Penyewaan Berdasarkan Cuaca')
