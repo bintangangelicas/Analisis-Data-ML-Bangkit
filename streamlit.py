@@ -12,7 +12,6 @@ ssl._create_default_https_context = ssl._create_unverified_context
 st.title('Dashboard Penyewaan Sepeda')
 
 #Baca Dataset
-@st.cache_data 
 def load_data():
     data = pd.read_csv('https://raw.githubusercontent.com/bintangangelicas/Analisis-Data-ML-Bangkit/main/day.csv',delimiter=',')
     return data
