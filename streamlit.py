@@ -54,3 +54,7 @@ plt.xlabel('Waktu')
 plt.ylabel('Mean Penyewaan')
 
 st.pyplot()
+
+st.markdown('''**Conclusion Pertanyaan 2 (Pada pukul berapa di setiap harinya angka peminjaman sepeda berada meningkat (peak hour)?)**
+
+Berdasarkan barplot tersebut, dapat dilihat bahwa angka peminjaman paling tinggi berada di antara pukul 17-18. Hal ini mungkin terjadi dikarenakan waktu tersebut merupakan waktu selesai aktivitas di daerah tersebut. Diikuti pada pukul 8 di mana kemungkinan merupakan waktu mulai beraktivitas.''')
