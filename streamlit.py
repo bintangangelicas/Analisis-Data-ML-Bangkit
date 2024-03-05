@@ -56,13 +56,15 @@ Dapat disimpulkan bahwa pada cuaca (1) di mana cuaca bersih dan berawan angka pe
 st.subheader('Rata - Rata Penyewaan Berdasarkan Waktu')
 jumlah_pinjam = load_data1().groupby('hr')['cnt'].mean()
 
-plt.bar(jumlah_pinjam.index, jumlah_pinjam.values, color='brown')
+# Your plotting code
+fig, ax = plt.subplots()
+ax.bar(jumlah_pinjam.index, jumlah_pinjam.values, color='brown')
+ax.set_title('Rata - Rata Penyewaan Berdasarkan Jam')
+ax.set_xlabel('Waktu')
+ax.set_ylabel('Mean Penyewaan')
 
-plt.title('Rata - Rata Penyewaan Berdasarkan Jam')
-plt.xlabel('Waktu')
-plt.ylabel('Mean Penyewaan')
-
-st.pyplot()
+# Display the plot using st.pyplot()
+st.pyplot(fig)
 
 st.markdown('''**Conclusion Pertanyaan 2 (Pada pukul berapa di setiap harinya angka peminjaman sepeda berada meningkat (peak hour)?)**
 
