@@ -14,14 +14,13 @@ def load_data():
     data = pd.read_csv('https://raw.githubusercontent.com/bintangangelicas/Analisis-Data-ML-Bangkit/96ea2a88a69f7873bcd44a9dfb30620fce1e5678/day.csv')
     return data
 
-def load_data():
-    data1 = pd.read_csv('https://raw.githubusercontent.com/bintangangelicas/Analisis-Data-ML-Bangkit/96ea2a88a69f7873bcd44a9dfb30620fce1e5678/hour.csv
-')
+def load_data1():
+    data1 = pd.read_csv('https://raw.githubusercontent.com/bintangangelicas/Analisis-Data-ML-Bangkit/96ea2a88a69f7873bcd44a9dfb30620fce1e5678/hour.csv')
     return data1
 
 st.subheader('Rata - Rata Penyewaan Berdasarkan Cuaca')
 
-jumlah_pinjam = data_day.groupby('weathersit')['cnt'].mean()
+jumlah_pinjam = load_data.groupby('weathersit')['cnt'].mean()
 
 plt.bar(jumlah_pinjam.index, jumlah_pinjam.values, color='green')
 
@@ -32,7 +31,7 @@ plt.ylabel('Mean Penyewaan')
 st.pyplot()
 
 
-jumlah_pinjam = data_hour.groupby('hr')['cnt'].mean()
+jumlah_pinjam = load_data1.groupby('hr')['cnt'].mean()
 
 plt.bar(jumlah_pinjam.index, jumlah_pinjam.values, color='brown')
 
